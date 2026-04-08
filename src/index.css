@@ -5,7 +5,57 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
+  /* Light theme */
+  :root, .light {
+    --background: 220 20% 97%;
+    --foreground: 230 20% 10%;
+
+    --card: 220 20% 94%;
+    --card-foreground: 230 20% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 20% 10%;
+
+    --primary: 199 89% 48%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 90%;
+    --secondary-foreground: 230 20% 20%;
+
+    --muted: 220 15% 92%;
+    --muted-foreground: 215 15% 45%;
+
+    --accent: 24 94% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 199 89% 48%;
+
+    --radius: 1rem;
+
+    --glass-bg: 220 20% 92%;
+    --glass-border: 220 15% 82%;
+    --glass-shine: 0 0% 100%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(199, 89%, 48%), hsl(217, 91%, 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(24, 94%, 53%), hsl(340, 82%, 52%));
+
+    --sidebar-background: 220 20% 95%;
+    --sidebar-foreground: 230 20% 10%;
+    --sidebar-primary: 199 89% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 90%;
+    --sidebar-accent-foreground: 230 20% 20%;
+    --sidebar-border: 220 15% 85%;
+    --sidebar-ring: 199 89% 48%;
+  }
+
+  /* Dark theme */
+  .dark {
     --background: 230 20% 5%;
     --foreground: 210 40% 95%;
 
@@ -65,6 +115,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -74,6 +125,20 @@
 
 @layer components {
   .glass-card {
+    background: linear-gradient(
+      135deg,
+      hsla(var(--glass-bg), 0.6) 0%,
+      hsla(var(--glass-bg), 0.3) 100%
+    );
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsla(var(--glass-border), 0.4);
+    box-shadow:
+      0 4px 24px hsla(0, 0%, 0%, 0.1),
+      inset 0 1px 0 hsla(var(--glass-shine), 0.06);
+  }
+
+  .dark .glass-card {
     background: linear-gradient(
       135deg,
       hsla(220, 20%, 100%, 0.06) 0%,
@@ -89,29 +154,29 @@
     @apply glass-card transition-all duration-300;
   }
   .glass-card-hover:hover {
-    border-color: hsla(199, 89%, 60%, 0.25);
+    border-color: hsla(var(--ring), 0.25);
     box-shadow:
-      0 8px 32px hsla(199, 89%, 60%, 0.1),
-      inset 0 1px 0 hsla(0, 0%, 100%, 0.08);
+      0 8px 32px hsla(var(--ring), 0.1),
+      inset 0 1px 0 hsla(var(--glass-shine), 0.08);
     transform: translateY(-2px);
   }
 
   .text-gradient-primary {
-    background: linear-gradient(135deg, hsl(199, 89%, 60%), hsl(217, 91%, 65%));
+    background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-accent {
-    background: linear-gradient(135deg, hsl(24, 94%, 53%), hsl(340, 82%, 52%));
+    background: var(--gradient-accent);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .glow-primary {
-    box-shadow: 0 0 20px hsla(199, 89%, 60%, 0.25), 0 0 40px hsla(199, 89%, 60%, 0.08);
+    box-shadow: 0 0 20px hsla(var(--primary), 0.25), 0 0 40px hsla(var(--primary), 0.08);
   }
 
   .section-padding {
