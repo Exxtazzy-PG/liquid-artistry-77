@@ -106,13 +106,13 @@ const translations: Record<string, Record<Language, string>> = {
 
 export function AppProvider({ children }: { children: ReactNode }) {
   const [theme, setThemeState] = useState<Theme>(() =>
-    (localStorage.getItem('theme') as Theme) || 'dark'
+    (localStorage.getItem('theme') as Theme) || 'light'
   );
   const [language, setLanguageState] = useState<Language>(() =>
-    (localStorage.getItem('language') as Language) || 'ru'
+    (localStorage.getItem('language') as Language) || 'en'
   );
   const [accentColor, setAccentColorState] = useState<AccentColor>(() =>
-    (localStorage.getItem('accentColor') as AccentColor) || 'blue'
+    (localStorage.getItem('accentColor') as AccentColor) || 'orange'
   );
 
   const setTheme = (t: Theme) => {
