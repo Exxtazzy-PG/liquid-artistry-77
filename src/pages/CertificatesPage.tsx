@@ -53,7 +53,7 @@ export default function CertificatesPage() {
   const filtered = filter === 'all' ? certificates : certificates.filter(c => c.category === filter);
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <SectionHeading label={t('certificates.label')} title={t('certificates.title')} description={t('certificates.desc')} />
 
       <div className="flex items-center justify-center gap-2 mb-10 flex-wrap">

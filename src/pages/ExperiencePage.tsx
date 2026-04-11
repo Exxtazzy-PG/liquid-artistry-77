@@ -31,7 +31,7 @@ export default function ExperiencePage() {
   const timeline = language === 'ru' ? timelineRu : timelineEn;
 
   return (
-    <div className="max-w-4xl mx-auto px-6 py-12">
+    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <SectionHeading label={t('experience.label')} title={t('experience.title')} description={t('experience.desc')} />
 
       <div className="relative">
