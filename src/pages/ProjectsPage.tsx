@@ -50,7 +50,7 @@ export default function ProjectsPage() {
   const filtered = activeFilter === 'all' ? projects : projects.filter(p => p.category === activeFilter);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <SectionHeading label={t('projects.label')} title={t('projects.title')} description={t('projects.desc')} />
 
       {/* Filter tabs */}

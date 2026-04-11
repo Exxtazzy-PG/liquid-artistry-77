@@ -51,7 +51,7 @@ export default function SkillsPage() {
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-6 py-12">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <SectionHeading label={t('skills.label')} title={t('skills.title')} description={t('skills.desc')} />
 
       <div className="flex items-center justify-center gap-2 mb-10">

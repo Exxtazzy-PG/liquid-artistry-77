@@ -41,7 +41,7 @@ export default function ServicesPage() {
   const [expanded, setExpanded] = useState<number | null>(null);
 
   return (
-    <div className="max-w-6xl mx-auto px-6 py-12">
+    <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
       <SectionHeading label={t('services.label')} title={t('services.title')} description={t('services.desc')} />
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
