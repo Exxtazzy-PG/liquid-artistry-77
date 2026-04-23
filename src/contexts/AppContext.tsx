@@ -112,7 +112,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
     (localStorage.getItem('language') as Language) || 'en'
   );
   const [accentColor, setAccentColorState] = useState<AccentColor>(() =>
-    (localStorage.getItem('accentColor') as AccentColor) || 'orange'
+    (localStorage.getItem('accentColor') as AccentColor) || 'green'
   );
 
   const setTheme = (t: Theme) => {
