@@ -3,9 +3,9 @@ import GlassCard from '@/components/GlassCard';
 import SectionHeading from '@/components/SectionHeading';
 import { useApp } from '@/contexts/AppContext';
 import {
-  Calendar, MapPin, Rocket, Heart, BookOpen, Gamepad2, Music, Coffee,
+  Calendar, MapPin, Rocket, Heart, BookOpen, Coffee, Lock,
   Globe, Trophy, Target, Lightbulb, GraduationCap, Monitor, Laptop, Cpu,
-  Code2, Palette, Server, Smartphone, Terminal, Database, PenTool, Braces
+  Code2, Palette, Server, Smartphone, Terminal, Database, Shield, Braces
 } from 'lucide-react';
 
 export default function AboutPage() {
@@ -20,13 +20,13 @@ export default function AboutPage() {
 
   const interests = [
     { icon: BookOpen, label: language === 'en' ? 'Self-learning' : 'Самообучение' },
-    { icon: Gamepad2, label: 'Gaming' },
-    { icon: Music, label: language === 'en' ? 'Music' : 'Музыка' },
+    { icon: Shield, label: language === 'en' ? 'Cybersecurity' : 'Кибербезопасность' },
     { icon: Coffee, label: 'Coffee & Code' },
     { icon: Globe, label: 'Open Source' },
     { icon: Lightbulb, label: language === 'en' ? 'Problem Solving' : 'Решение задач' },
-    { icon: Monitor, label: language === 'en' ? '3D Graphics' : '3D Графика' },
+    { icon: Lock, label: language === 'en' ? 'Ethical Hacking' : 'Этичный хакинг' },
     { icon: Target, label: language === 'en' ? 'Hackathons' : 'Хакатоны' },
+    { icon: Braces, label: language === 'en' ? 'Clean Code' : 'Чистый код' },
   ];
 
   const techJourney = language === 'en'
