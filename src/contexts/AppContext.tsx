@@ -160,6 +160,17 @@ export function AppProvider({ children }: { children: ReactNode }) {
 
 export function useApp() {
   const ctx = useContext(AppContext);
-  if (!ctx) throw new Error('useApp must be used within AppProvider');
+  if (!ctx) {
+    // Fallback to prevent crashes during HMR or when used outside provider
+    return {
+      theme: 'light' as Theme,
+      setTheme: () => {},
+      language: 'en' as Language,
+      setLanguage: () => {},
+      accentColor: 'green' as AccentColor,
+      setAccentColor: () => {},
+      t: (key: string) => translations[key]?.en || key,
+    };
+  }
   return ctx;
 }
