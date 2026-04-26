@@ -12,7 +12,7 @@ export default function MainLayout() {
   const location = useLocation();
 
   return (
-    <SidebarProvider>
+    <SidebarProvider defaultOpen={false}>
       <div className="min-h-screen flex w-full bg-background relative overflow-hidden">
         <Suspense fallback={null}>
           <Scene3D />
