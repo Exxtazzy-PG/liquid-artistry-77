@@ -107,10 +107,10 @@ export default function ProjectsPage() {
                   ))}
                 </div>
                 <div className="flex items-center gap-3">
-                  <button className="text-muted-foreground hover:text-primary transition-colors">
+                  <button aria-label={`View ${project.title} source on GitHub`} className="text-muted-foreground hover:text-primary transition-colors">
                     <Github className="w-4 h-4" />
                   </button>
-                  <button className="text-muted-foreground hover:text-primary transition-colors">
+                  <button aria-label={`Open live demo of ${project.title}`} className="text-muted-foreground hover:text-primary transition-colors">
                     <Globe className="w-4 h-4" />
                   </button>
                 </div>
