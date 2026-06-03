@@ -12,3 +12,5 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://liquid-artistry-77.lovable.app/sitemap.xml
