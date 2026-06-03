@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GlassCard from '@/components/GlassCard';

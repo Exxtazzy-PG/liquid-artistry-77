@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Code2, Users, Layers, Star, Camera, Download, MapPin, Calendar, Zap, Globe, Heart, Coffee, ExternalLink, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
