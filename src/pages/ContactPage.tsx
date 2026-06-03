@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import GlassCard from '@/components/GlassCard';
@@ -38,6 +39,23 @@ export default function ContactPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Contact Muhammad — Get In Touch"
+        description="Reach out to Muhammad for collaborations, freelance projects or questions via email, social links or the contact form."
+        path="/contact"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'ContactPage',
+          name: 'Contact Muhammad',
+          url: 'https://liquid-artistry-77.lovable.app/contact',
+          contactPoint: {
+            '@type': 'ContactPoint',
+            contactType: 'customer support',
+            email: 'muhammad@example.com',
+            availableLanguage: ['English', 'Russian'],
+          },
+        }}
+      />
       <SectionHeading label={t('contact.label')} title={t('contact.title')} description={t('contact.desc')} />
 
       {/* Availability badge */}

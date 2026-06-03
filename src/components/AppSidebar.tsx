@@ -92,6 +92,8 @@ export function AppSidebar() {
         <div className="mt-auto px-2 pb-2 relative">
           <button
             onClick={() => setSettingsOpen(!settingsOpen)}
+            aria-label={t('settings.theme')}
+            aria-expanded={settingsOpen}
             className={`w-full flex items-center gap-2.5 px-2.5 py-2 rounded-xl text-[13px] font-medium transition-all duration-200 ${
               settingsOpen
                 ? 'bg-primary/15 text-primary'
@@ -180,6 +182,8 @@ export function AppSidebar() {
                       <button
                         key={opt.color}
                         onClick={() => setAccentColor(opt.color)}
+                        aria-label={`Accent color ${opt.color}`}
+                        aria-pressed={accentColor === opt.color}
                         className={`w-5 h-5 rounded-full ${opt.bg} transition-all ${
                           accentColor === opt.color ? 'ring-2 ring-foreground ring-offset-1 ring-offset-background scale-110' : 'hover:scale-110'
                         }`}

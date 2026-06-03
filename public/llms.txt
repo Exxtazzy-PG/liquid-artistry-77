@@ -1,0 +1,14 @@
+# Muhammad — Frontend Developer
+
+> Portfolio of Muhammad, a 16-year-old frontend developer from Uzbekistan, specializing in React, TypeScript, and modern web development with a focus on cybersecurity awareness.
+
+## Pages
+
+- [Home](/): Overview, hero, and intro to Muhammad's portfolio.
+- [About](/about): Background, interests, and personal story.
+- [Skills](/skills): Technical stack — React, TypeScript, Tailwind, Bootstrap, tooling and cybersecurity.
+- [Experience](/experience): Work and project experience timeline.
+- [Projects](/projects): Showcase of selected projects with links and tags.
+- [Services](/services): Services offered — web development, UI design, consulting.
+- [Certificates](/certificates): Earned certificates and credentials.
+- [Contact](/contact): Contact details and form to get in touch.

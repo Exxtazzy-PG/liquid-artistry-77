@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Code2, Users, Layers, Star, Camera, Download, MapPin, Calendar, Zap, Globe, Heart, Coffee, ExternalLink, Github } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -131,6 +132,20 @@ PROJECTS
 
   return (
     <div className="flex flex-col items-center justify-center min-h-[calc(100vh-3rem)] px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Muhammad — Frontend Developer Portfolio"
+        description="Portfolio of Muhammad, a 16-year-old frontend developer from Uzbekistan building modern React, TypeScript and cybersecurity-aware web apps."
+        path="/"
+        jsonLd={{
+          '@context': 'https://schema.org',
+          '@type': 'Person',
+          name: 'Muhammad',
+          jobTitle: 'Frontend Developer',
+          url: 'https://liquid-artistry-77.lovable.app/',
+          nationality: 'Uzbekistan',
+          knowsAbout: ['React', 'TypeScript', 'Tailwind CSS', 'Cybersecurity'],
+        }}
+      />
       <div className="relative w-full max-w-6xl mx-auto">
         {/* Ambient glows */}
         <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full opacity-15 blur-[100px] pointer-events-none"

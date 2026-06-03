@@ -1,3 +1,4 @@
+import SEO from '@/components/SEO';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import GlassCard from '@/components/GlassCard';
@@ -51,6 +52,11 @@ export default function ProjectsPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Projects — Muhammad's Portfolio"
+        description="Selected projects by Muhammad showcasing React, TypeScript, UI design and modern web development with live demos and source links."
+        path="/projects"
+      />
       <SectionHeading label={t('projects.label')} title={t('projects.title')} description={t('projects.desc')} />
 
       {/* Filter tabs */}
@@ -107,10 +113,10 @@ export default function ProjectsPage() {
                   ))}
                 </div>
                 <div className="flex items-center gap-3">
-                  <button className="text-muted-foreground hover:text-primary transition-colors">
+                  <button aria-label={`View ${project.title} source on GitHub`} className="text-muted-foreground hover:text-primary transition-colors">
                     <Github className="w-4 h-4" />
                   </button>
-                  <button className="text-muted-foreground hover:text-primary transition-colors">
+                  <button aria-label={`Open live demo of ${project.title}`} className="text-muted-foreground hover:text-primary transition-colors">
                     <Globe className="w-4 h-4" />
                   </button>
                 </div>

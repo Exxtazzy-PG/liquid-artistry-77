@@ -18,9 +18,9 @@ export default function SectionHeading({ label, title, description }: SectionHea
       <span className="text-gradient-primary text-sm font-semibold tracking-widest uppercase mb-4 block">
         {label}
       </span>
-      <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
+      <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
         {title}
-      </h2>
+      </h1>
       {description && (
         <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
           {description}
