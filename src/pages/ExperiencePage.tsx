@@ -50,6 +50,11 @@ export default function ExperiencePage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Experience — Muhammad's Developer Journey"
+        description="Timeline of Muhammad's experience: projects, roles and milestones as a self-taught frontend developer from Uzbekistan."
+        path="/experience"
+      />
       <SectionHeading label={t('experience.label')} title={t('experience.title')} description={t('experience.desc')} />
 
       {/* Stats overview */}

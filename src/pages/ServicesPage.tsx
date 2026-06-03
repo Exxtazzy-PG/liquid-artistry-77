@@ -42,6 +42,19 @@ export default function ServicesPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Services — Web Development & UI Design"
+        description="Services offered by Muhammad: web development, UI design, performance and cybersecurity consulting for modern web apps."
+        path="/services"
+        jsonLd={services.map((s: any) => ({
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          name: s.title,
+          description: s.desc,
+          ...(s.price ? { offers: { '@type': 'Offer', price: String(s.price).replace(/[^0-9.]/g, '') || undefined, priceCurrency: 'USD' } } : {}),
+          provider: { '@type': 'Person', name: 'Muhammad' },
+        }))}
+      />
       <SectionHeading label={t('services.label')} title={t('services.title')} description={t('services.desc')} />
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">

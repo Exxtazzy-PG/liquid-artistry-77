@@ -102,6 +102,11 @@ export default function SkillsPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Skills — React, TypeScript, Tailwind & More"
+        description="Muhammad's technical stack: React, TypeScript, Tailwind, Bootstrap, Node.js, MongoDB, Git, Figma, Jupyter and cybersecurity fundamentals."
+        path="/skills"
+      />
       <SectionHeading label={t('skills.label')} title={t('skills.title')} description={t('skills.desc')} />
 
       {/* Overview stats */}

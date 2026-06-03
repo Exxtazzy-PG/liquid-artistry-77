@@ -75,6 +75,11 @@ export default function AboutPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="About Muhammad — Frontend Developer's Story"
+        description="Learn about Muhammad: a 16-year-old self-taught frontend developer from Uzbekistan, his journey, interests and approach to building web products."
+        path="/about"
+      />
       <SectionHeading label={t('about.label')} title={t('about.title')} />
 
       {/* Bio */}

@@ -54,6 +54,11 @@ export default function CertificatesPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Certificates — Muhammad's Credentials"
+        description="Certificates and credentials earned by Muhammad across frontend, backend and cybersecurity learning tracks."
+        path="/certificates"
+      />
       <SectionHeading label={t('certificates.label')} title={t('certificates.title')} description={t('certificates.desc')} />
 
       <div className="flex items-center justify-center gap-2 mb-10 flex-wrap">

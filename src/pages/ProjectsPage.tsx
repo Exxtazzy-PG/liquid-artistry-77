@@ -51,6 +51,11 @@ export default function ProjectsPage() {
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      <SEO
+        title="Projects — Muhammad's Portfolio"
+        description="Selected projects by Muhammad showcasing React, TypeScript, UI design and modern web development with live demos and source links."
+        path="/projects"
+      />
       <SectionHeading label={t('projects.label')} title={t('projects.title')} description={t('projects.desc')} />
 
       {/* Filter tabs */}
